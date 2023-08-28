@@ -4,5 +4,5 @@ models:
   - name: stg_energy_facts
     description: Table from the Global sustainable energy dataset that displays the country energy facts.
 
-  - name: stg_dim_electricity
-    description: Join table displaying energy facts and electricity facts
+  - name: country_electricity_dim
+    description: Join table displaying countries and their electricity facts
