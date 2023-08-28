@@ -1,4 +1,0 @@
--- with enrgy_data as (
---     select * 
---     from ref{{stg_enrgy_facts}}
--- )
