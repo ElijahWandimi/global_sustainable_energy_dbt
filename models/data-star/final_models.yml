@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: tbl_global_analytics
+    description: The final table that will be used for analytics

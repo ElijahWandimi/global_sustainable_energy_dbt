@@ -12,11 +12,19 @@ country_dim AS (
     FROM `sonorous-asset-391616.global_sustainable_energy_data.country_dim`
 ),
 final AS (
+<<<<<<< HEAD
+    SELECT  c.country_id,
+            e.Electricity_from_fossil_fuels,
+            e.Electricity_from_nuclear,
+            e.Electricity_from_renewables,
+            COALESCE(e.Low_carbon_electricity_perct,0) AS Low_carbon_electricity_perct,
+=======
     SELECT  e.electricity_data_id,
             e.Electricity_from_fossil_fuels,
             e.Electricity_from_nuclear,
             e.Electricity_from_renewables,
             e.Low_carbon_electricity_perct,
+>>>>>>> 7dd91473f3181caa8df219939a931fa5b49fa986
             e.Access_to_electricity_perct,
             c.Entity,
             c.Land_Area,

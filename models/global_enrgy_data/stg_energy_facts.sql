@@ -13,7 +13,7 @@ WITH tbl_view_facts AS (
     ),
 
     energy_facts AS (
-        SELECT  f.facts_id AS energy_country_id,
+        SELECT  f.facts_id AS country_id,
                 f.gdp_growth,
                 f.gdp_per_capita, 
                 f.Density_pkm,
@@ -23,8 +23,8 @@ WITH tbl_view_facts AS (
                 f.Access_to_clean_fuels_for_cooking,
                 e.Primary_energy_consumption_per_capita_kWhperson,
                 e.Energy_intensity_level_of_primary_energy, 
-                e.Renewable_electricity_generating_capacity_percapita,
-                e.Renewable_energy_share_in_total_final_energy_consumption_perct,
+                COALESCE(e.Renewable_electricity_generating_capacity_percapita, 0) AS Renewable_electricity_generating_capacity_percapita,
+                COALESCE(e.Renewable_energy_share_in_total_final_energy_consumption_perct, 0) AS Renewable_energy_share_in_total_final_energy_consumption_perct,
                 e.Renewables_perct_primary_energy
         FROM tbl_view_facts f
         INNER JOIN view_enrgy_facts e

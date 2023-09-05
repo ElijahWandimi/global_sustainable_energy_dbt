@@ -35,4 +35,7 @@ models:
     # Config indicated by + and applies to all files under models/global_energy_data/
     global-energy_data:
       +materialized: view
+
+    data-star:
+      +materialized: table
       
